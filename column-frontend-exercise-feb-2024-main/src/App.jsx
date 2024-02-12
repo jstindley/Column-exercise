@@ -1,12 +1,11 @@
 import './styles/App.css';
 import SearchNotice from './SearchNotice';
 
-
 function App() {
   return (
     <div>
-      <SearchNotice />
-    </div>
+      <SearchNotice />    
+  </div>
   );
 }
 

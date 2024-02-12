@@ -1,18 +1,21 @@
-import Notice from "./NoticeCard";
+import Notice from "./NoticeItem";
 import { Divider, List } from '@mui/material'
+import { Link } from 'react-router-dom';
 
 const Results = ( { data }) => {
 
     return (
         <div>
-            { data.length === 0 ? <p>No Results found</p> : 
+            { data.length === 0 ? <p>No Results</p> : 
             <List> {
-                    data.map((notice, index) =>  {
+                    data.map((notice) =>  {
                         return (
-                            <div>
-                                <Notice key={index} title={notice.title} date={notice.publicationDate} content={notice.content.substring(0,50)+ '...'} />
-                                <Divider variant="middle" component="li" />
-                            </div>
+                            <Link  key={notice.id} to={`/notice/${notice.id}`}>
+                                <div>
+                                    <Notice notice={notice} />
+                                    <Divider variant="middle" component="li" />
+                                </div>
+                            </Link>
                         )
                     })
                 }
