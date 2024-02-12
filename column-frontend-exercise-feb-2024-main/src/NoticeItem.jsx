@@ -1,4 +1,3 @@
-import './styles/NoticeItem.css';
 import { ListItem, ListItemText } from '@mui/material';
 const Notice = ({ notice }) => {
 

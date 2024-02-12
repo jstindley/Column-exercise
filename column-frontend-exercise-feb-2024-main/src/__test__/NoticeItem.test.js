@@ -9,7 +9,7 @@ test('renders Notice list when data is present', () => {
             publicationDate: Timestamp.fromDate(new Date("2022-01-01")),
             content: "Notice 1 content"
         };
-    render(<Notice title={noticeData.title} date={noticeData.publicationDate} content={noticeData.content} />);
+    render(<Notice notice={noticeData} />);
     const results = screen.getByRole('listitem');
     expect(results).toBeInTheDocument();
     expect(results.innerHTML).toContain("Notice 1");
