@@ -95,13 +95,28 @@ const SearchNotice = () => {
         setQuery(noticeQuery);
     }, [searchText]);
     
+
+    const Welcome = () => {
+        return (
+            <Box sx={{margin: '0 20px'}}>
+                <h1>Welcome to the Notice Board</h1>
+                <section>
+                    Use the search to find a Notice by title. <br/> 
+                    Click on the notice to see the details. <br/>
+                    Click on Load More to see more notices if available. <br/>
+                    Click on the logo to return to the home page.
+                </section>
+            </Box>
+        )
+    };
+
     const NoticeResults = () => {
         return (
             <div>
                 { hasSearchText()  ?  <Box sx={{margin: '0 10px'}}>  
                 <Results data={searchResults} />
                 {showMore() ? null : <Button variant="contained" sx={{margin: '10px'}} onClick={loadMore}>Load More</Button>}
-            </Box> : null }
+            </Box> : <Welcome/>}
             </div> 
         );
     };
