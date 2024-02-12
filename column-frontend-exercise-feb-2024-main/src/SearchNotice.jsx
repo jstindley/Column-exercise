@@ -102,9 +102,9 @@ const SearchNotice = () => {
                 <h1>Welcome to the Notice Board</h1>
                 <section>
                     Use the search to find a Notice by title. <br/> 
-                    Click on the notice to see the details. <br/>
-                    Click on Load More to see more notices if available. <br/>
-                    Click on the logo to return to the home page.
+                    Click on the Notice to see the details. <br/>
+                    Click on Load More to see more Notices if available. <br/>
+                    Click on the logo to return to the Home Page.
                 </section>
             </Box>
         )
